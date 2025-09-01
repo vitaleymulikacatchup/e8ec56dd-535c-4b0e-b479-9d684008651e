@@ -22,16 +22,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <body
         className={`${interTight.variable} ${poppins.variable} antialiased`}
         style={{background: 'linear-gradient(135deg, #fff 0%, #f5faff 60%, #fff 100%)'}}
       >
-        {children}
+        <SiteThemeProvider theme={{ styleVariant: "funAndTrendy", colorTemplate: 2, textAnimation: "slide" }}>
+          {children}
+        </SiteThemeProvider>
       </body>
     </html>
   );
